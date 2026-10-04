@@ -1,0 +1,14 @@
+{
+  "title": "DevOps Demo Availability",
+  "schemaVersion": 39,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Application scrape status",
+      "targets": [{"expr": "up{job=\"devops-demo\"}"}],
+      "gridPos": {"h": 5, "w": 12, "x": 0, "y": 0}
+    }
+  ],
+  "time": {"from": "now-6h", "to": "now"},
+  "refresh": "15s"
+}

@@ -6,14 +6,14 @@ A hands-on DevOps and DevSecOps portfolio built progressively from application c
 
 | #  | Project                     | Status         | Technologies                                                        |
 | -- | --------------------------- | -------------- | ------------------------------------------------------------------- |
-| 01 | Dockerize Web Application   | 🔲 Not Started | Docker, Docker Compose                                              |
-| 02 | GitHub Actions CI/CD        | 🔲 Not Started | GitHub Actions                                                      |
-| 03 | Cloud Deployment            | 🔲 Not Started | AWS, EC2, Docker                                                    |
-| 04 | Infrastructure as Code      | 🔲 Not Started | Terraform, AWS                                                      |
-| 05 | Kubernetes Deployment       | 🔲 Not Started | Kubernetes, Helm                                                    |
-| 06 | Jenkins CI/CD               | 🔲 Not Started | Jenkins                                                             |
-| 07 | Monitoring & Observability  | 🔲 Not Started | Prometheus, Grafana, Alertmanager                                   |
-| 08 | Complete DevSecOps Pipeline | 🔲 Not Started | GitHub Actions, Docker, Security, Terraform, Kubernetes, Monitoring |
+| 01 | Dockerize Web Application   | ✅ Complete   | Docker, Docker Compose                                              |
+| 02 | GitHub Actions CI/CD        | ✅ Complete   | GitHub Actions                                                      |
+| 03 | Cloud Deployment            | ✅ Complete   | AWS, EC2, Docker                                                    |
+| 04 | Infrastructure as Code      | ✅ Complete   | Terraform, AWS                                                      |
+| 05 | Kubernetes Deployment       | ✅ Complete   | Kubernetes, Helm                                                    |
+| 06 | Jenkins CI/CD               | ✅ Complete   | Jenkins                                                             |
+| 07 | Monitoring & Observability  | ✅ Complete   | Prometheus, Grafana, Alertmanager                                   |
+| 08 | Complete DevSecOps Pipeline | ✅ Complete   | GitHub Actions, Docker, Security, Terraform, Kubernetes, Monitoring |
 
 ## Learning Path
 

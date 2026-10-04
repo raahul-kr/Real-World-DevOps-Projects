@@ -1,0 +1,11 @@
+groups:
+  - name: devops-demo
+    rules:
+      - alert: DevOpsDemoUnavailable
+        expr: up{job="devops-demo"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: DevOps demo application is unavailable
+          description: Prometheus cannot scrape the application health endpoint.
