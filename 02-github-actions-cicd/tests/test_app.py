@@ -17,3 +17,10 @@ def test_health():
 
     assert response.status_code == 200
     assert response.json["status"] == "healthy"
+
+
+def test_metrics():
+    response = app.test_client().get("/metrics")
+
+    assert response.status_code == 200
+    assert b"devops_demo_health 1" in response.data
