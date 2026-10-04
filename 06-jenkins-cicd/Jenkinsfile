@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    environment {
+        PROJECT_DIR = '02-github-actions-cicd'
+        IMAGE = 'devops-demo:${BUILD_NUMBER}'
+    }
+
+    stages {
+        stage('Install') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    sh 'python3 -m pip install --user -r requirements.txt'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    sh 'python3 -m pytest -v --junitxml=test-results.xml'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                dir(env.PROJECT_DIR) {
+                    sh "docker build --tag ${IMAGE} ."
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            dir(env.PROJECT_DIR) {
+                sh "docker image rm --force ${IMAGE} || true"
+            }
+            junit allowEmptyResults: true, testResults: 'test-results.xml'
+        }
+    }
+}
