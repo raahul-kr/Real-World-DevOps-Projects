@@ -27,7 +27,6 @@ services:
       - "80:5000"
 EOF
 
-aws ecr get-login-password --region "${AWS_REGION}" \
-  | docker login --username AWS --password-stdin "${IMAGE_URI%%/*}"
+aws ecr get-login-password --region "${AWS_REGION}" | docker login --username AWS --password-stdin "${IMAGE_URI%%/*}"
 docker compose -f /opt/devops-demo/compose.yaml pull
 docker compose -f /opt/devops-demo/compose.yaml up -d
